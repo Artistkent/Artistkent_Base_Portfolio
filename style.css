@@ -288,9 +288,9 @@ z-index: 10;
     width:100%;
     
 padding:5px;
-   
-   overflow-y: scroll;
-   scroll-behavior: smooth;
+   overflow: hidden;
+  
+  
 }
 
 .center_inner>*{
@@ -309,13 +309,26 @@ padding:5px;
     font-weight: lighter;
 }
 
-.center_inner_content{
-   
- height:100%;
-    width:100%;
-    border: solid 1px white;
+.content_left{
+    position: relative;
+    
+        display: flex;
+      
+        height: 100%;
+        width:100%;
+        padding:10px;
+     
+    
+       
+    
+       justify-content: center;
+    
+        transform-style:preserve-3d;
+    
+        overflow-y: scroll;
+    }
 
-}
+
 
 
 /*
@@ -516,25 +529,7 @@ position: relative;
     100%{top: 100%;}
 }
 
-.content_left{
-position: relative;
 
-    display: flex;
-  
-    height: 100%;
-    width:100%;
-    padding:10px;
- 
-
-   
-
-   justify-content: center;
-
-    transform-style:preserve-3d;
-
-
-   
-}
 
 
 .name{
@@ -562,6 +557,7 @@ position: relative;
     text-align: left;
     width:100%;
     top:10px;
+    flex-grow: 3;
     
 }
 
@@ -577,7 +573,7 @@ padding-bottom: 10px;
 }
 
 .content_2, .content_3, .content_4, .content_5, .content_6{
-    position: absolute;
+    position: relative;
 top:10px;
     padding-left:20px;
     text-align: left;
@@ -598,6 +594,8 @@ padding-right: 20px;
     transform-origin: left;
 animation: flip 0.3s linear;
 animation-fill-mode: both;
+width:0;
+padding:0;
 }
 
 @keyframes flip{
@@ -619,6 +617,7 @@ animation-fill-mode: both;
 }
 
 .flip_alt{
+    width:100%;
     transform-origin: right;
 animation: flip_alt 0.3s linear;
 animation-delay: 0.1s;
@@ -631,6 +630,8 @@ animation-fill-mode: both;
 }
 
 .flip_alt_back{
+    width:0;
+    padding:0;
     transform-origin: right;
 animation: flip_alt_back 0.3s linear;
 
