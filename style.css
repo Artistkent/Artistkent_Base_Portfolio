@@ -680,8 +680,33 @@ animation-fill-mode: both;
    max-width:0px!important;
    max-height:0px!important;
    overflow: hidden!important;
-   
+  
 }
+
+.zoom_in{
+    animation: zoom_in 0.4s ease-out;
+}
+
+@keyframes zoom_in {
+    0%{scale:1;}
+    25%{scale:1.05;}
+    50%{scale:1;}
+    75%{scale:1.02;}
+    100%{scale:1;}
+}
+
+.zoom_out{
+    animation: zoom_out 0.4s ease-out;
+}
+
+@keyframes zoom_out {
+    0%{scale:1;}
+    25%{scale:0.95;}
+    50%{scale:1;}
+    75%{scale:0.97;}
+    100%{scale:1;}
+}
+
 
 .project_link p{
     height: min-content;
@@ -789,7 +814,7 @@ color: yellow;
   
     border-radius: 10px;
   
-    border:double 5px rgba(255, 255, 255, 0.5);
+    border:double 5px rgba(255, 255, 255);
     background-color: transparent;
    
   }

@@ -580,7 +580,8 @@ $(function() {
 
  
   $('.project_img').click(function() {
-  
+    $('.project_link').toggleClass('zoom_in zoom_out');
+
    $('.project_p').toggleClass('no_show');
    $('.project_link_button').toggleClass('no_show');
    
