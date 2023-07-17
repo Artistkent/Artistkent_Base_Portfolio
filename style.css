@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -56,8 +63,14 @@ body{
             box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
     position: fixed;
+-ms-grid-columns: 1;
+grid-template-columns: 1;
+-ms-grid-rows: 2;
+grid-template-rows: 2;
+
     
     top: 0;
     bottom: 0;
@@ -66,11 +79,15 @@ body{
 
 }
 
+.main > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+
+}
+
 .wrapper{
 width:100%;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
+
 -webkit-box-pack: center;
     -ms-flex-pack: center;
         justify-content: center;
@@ -82,7 +99,7 @@ display: flex;
 
 
 .wrapper_inner{
-  top:30px;
+ 
     width: 100vw;
     max-width: 1280px;
     margin-top: 0;
@@ -117,7 +134,6 @@ background-color: transparent;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 10px;
  
 }
 
@@ -126,16 +142,20 @@ background-color: transparent;
     display: -ms-flexbox;
     display: flex;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    padding-top: 10px;
   
 overflow-x: scroll;
 
 scroll-behavior: smooth;
 
-/*background-color: rgba(255, 255, 255, 0.07);*/
 border: outset 2px white;
 border-radius: 10px;
+
+
 }
 
 ::-webkit-scrollbar{
@@ -626,8 +646,8 @@ left:0px;
     height:2px;
     margin-left:100%;
     width:400%;
-    background-image:-webkit-gradient(linear, right top, left top, from(black), color-stop(25%, white), color-stop(25%, black), color-stop(50%, white), color-stop(50%, black), color-stop(75%, white), color-stop(75%, black), to(white));
     background-image:-o-linear-gradient(right, black, white 25%, black 25%, white 50%, black 50%, white 75%, black 75%, white);
+    background-image:-webkit-gradient(linear, right top, left top, from(black), color-stop(25%, white), color-stop(25%, black), color-stop(50%, white), color-stop(50%, black), color-stop(75%, white), color-stop(75%, black), to(white));
     background-image:linear-gradient(to left, black, white 25%, black 25%, white 50%, black 50%, white 75%, black 75%, white);
 
     -webkit-animation: top_right_color 32s  infinite linear;
@@ -693,8 +713,8 @@ position: relative;
     height:400%;
     top: 100%;
     width:2px;
-    background-image:-webkit-gradient(linear, left bottom, left top, from(black), color-stop(25%, white), color-stop(25%, black), color-stop(50%, white), color-stop(50%, black), color-stop(75%, white), color-stop(75%, black), to(white));
     background-image:-o-linear-gradient(bottom, black, white 25%, black 25%, white 50%, black 50%, white 75%, black 75%, white);
+    background-image:-webkit-gradient(linear, left bottom, left top, from(black), color-stop(25%, white), color-stop(25%, black), color-stop(50%, white), color-stop(50%, black), color-stop(75%, white), color-stop(75%, black), to(white));
     background-image:linear-gradient(to top, black, white 25%, black 25%, white 50%, black 50%, white 75%, black 75%, white);
     
     
@@ -741,8 +761,9 @@ position: relative;
 
 
 .name{
-    position: absolute;
-    top:10px;
+    position: relative;
+    top:15px;
+
     margin:auto;
     width:100%;
     text-align: center;
@@ -750,6 +771,7 @@ position: relative;
     font-weight:normal;
     margin-left: 10px;
     padding:10px;
+    padding-bottom: 0;
 }
 
 .name img{
@@ -1181,7 +1203,10 @@ input[type=text], input[type=email], input[type=number], select, textarea {
 
 
 .top_links_wrapper{
+top:20%;
+
     position: fixed;
+  
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1361,7 +1386,6 @@ overflow: hidden;
 
     .wrapper{
         max-height: 100%;
-        padding-top:50px;
         padding-bottom: 30px;
     }
 
@@ -1410,7 +1434,6 @@ grid-column: 1;
     
         .wrapper{
             max-height: 100vh;
-            padding-top:50px;
             padding-bottom: 30px;
         }
     
