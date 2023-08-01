@@ -227,13 +227,22 @@ $( ".icon_wrapper_1" ).click(function() {
   /*CLICK IMAGE EXPAND PROJECT DESCRIPTION*/
   
    
-    $('.project_img').click(function() {
-      $('.project_link').toggleClass('zoom_in zoom_out');
+    $('.project_img:eq(0)').click(function() {
+      $('.project_link:eq(0)').toggleClass('zoom_in zoom_out');
   
-     $('.project_p').toggleClass('no_show');
-     $('.project_link_button').toggleClass('no_show');
+     $('.project_p:eq(0)').toggleClass('no_show');
+     $('.project_link_button:eq(0)').toggleClass('no_show');
      
     });
+
+    $('.project_img:eq(1)').click(function() {
+      $('.project_link:eq(1)').toggleClass('zoom_in zoom_out');
+  
+     $('.project_p:eq(1)').toggleClass('no_show');
+     $('.project_link_button:eq(1)').toggleClass('no_show');
+     
+    });
+  
   
   /*ROTATE ARROW ON CLICK SIDEBAR*/
   function rotateArrow() {
