@@ -100,7 +100,7 @@ display: flex;
 
 .wrapper_inner{
  
-    width: 100vw;
+    width: calc(100vw - 5px);
     max-width: 1280px;
     margin-top: 0;
     margin-bottom: 0;
@@ -141,7 +141,8 @@ background-color: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
+    width:100%;
+justify-content: center;
 
     margin-top: 10px;
     margin-bottom: 15px;
@@ -158,17 +159,22 @@ border-radius: 10px;
 
 }
 
+
+
 ::-webkit-scrollbar{
     width:0;
   }
+
+
 
   .header_inner_child{
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
 -ms-flex-pack: distribute;
-    justify-content: space-around;
+    
 padding:15px;
+width:100%;
 gap:15px;
   }
 
@@ -202,19 +208,15 @@ vertical-align: middle;
     -ms-flex-pack:center;
         justify-content:center;
 
-}
 
-.icon_wrapper p{
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
 height: 100%;
-width:130px;
+width:100%;
+
 -webkit-transition: 0.5s;
 -o-transition: 0.5s;
 transition: 0.5s;
 padding:8px;
-border: outset white 2px;
+border: outset  2px white;
     
     border-radius: 8px;
 
@@ -228,11 +230,11 @@ text-align: center;
         justify-content: center;
 }
 
-.icon_wrapper p:hover{
+.icon_wrapper :hover{
     cursor: pointer;
 }
 
-.icon_wrapper:nth-child(1) p:hover{
+.icon_wrapper:nth-of-type(1):hover{
    
       scale:1.1;
       border:outset 2px red;
@@ -256,7 +258,7 @@ text-align: center;
 
        
 
-    .icon_wrapper:nth-child(2) p:hover{
+    .icon_wrapper:nth-of-type(2):hover{
      
           scale:1.1;
           border:outset 2px yellow;
@@ -278,7 +280,7 @@ text-align: center;
             100%{border:solid 2px yellow;;}
            }
 
-           .icon_wrapper:nth-child(3) p:hover{
+           .icon_wrapper:nth-of-type(3):hover{
            
               scale:1.1;
               border:outset 2px rgb(0, 255, 0);
@@ -300,7 +302,8 @@ text-align: center;
                 100%{border:solid 2px rgb(0, 255, 0);}
                }
 
-               .icon_wrapper:nth-child(4) p:hover{
+
+               .icon_wrapper:nth-of-type(4):hover{
              
                   scale:1.1;
                   border:outset 2px blue;
@@ -322,7 +325,22 @@ text-align: center;
                     100%{border:solid 2px blue;;}
                    }
                    
+.after_content{
+    position: relative;
+   
+    display:flex;
+  
+    aspect-ratio:initial;
 
+
+height: 100%;
+width:100%;
+
+
+padding-left:0.1px;
+
+
+}
 
 .hover_color_r{
     -webkit-animation:button_grad11 0.5s ease;
@@ -411,7 +429,7 @@ z-index: 10;
 .center_inner{
 
 
- height:calc(100vh - 250px);
+ height:calc(100vh - 230px);
    
     width:100%;
     
@@ -1156,7 +1174,7 @@ color: yellow;
 
 
   
-input[type=text], input[type=email], input[type=number], select, textarea {
+input[type=text], input[type=email], input[type=tel], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -1169,7 +1187,7 @@ input[type=text], input[type=email], input[type=number], select, textarea {
   }
   
   input[type=submit] {
-    background-color: blue;
+    background: linear-gradient(to right, rgb(77, 77, 210), rgb(104, 150, 231) );
     color: white;
     font-weight:bold;
     padding: 12px 20px;
@@ -1180,7 +1198,7 @@ input[type=text], input[type=email], input[type=number], select, textarea {
   }
   
   input[type=submit]:hover {
-    background-color: white;
+    background: linear-gradient(to right, rgb(77, 77, 210), rgb(104, 150, 231) );
     color:black;
   }
   
@@ -1372,8 +1390,24 @@ overflow: hidden;
     100%{right:-70px;}
 }
 
+.est_date{
+    font-size: 12px;
+    padding-top: 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 
 @media screen and (max-width: 750px) {
+
+    .center_inner{
+
+
+        height:calc(100vh - 250px);
+          
+           
+         
+         
+       }
 
 .spin_wrapper{
     margin-top:-6px;
