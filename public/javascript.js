@@ -242,6 +242,22 @@ $( ".icon_wrapper_1" ).click(function() {
      $('.project_link_button:eq(1)').toggleClass('no_show');
      
     });
+
+    $('.project_img:eq(2)').click(function() {
+      $('.project_link:eq(2)').toggleClass('zoom_in zoom_out');
+  
+     $('.project_p:eq(2)').toggleClass('no_show');
+     $('.project_link_button:eq(2)').toggleClass('no_show');
+     
+    });
+
+    $('.project_img:eq(3)').click(function() {
+      $('.project_link:eq(3)').toggleClass('zoom_in zoom_out');
+  
+     $('.project_p:eq(3)').toggleClass('no_show');
+     $('.project_link_button:eq(3)').toggleClass('no_show');
+     
+    });
   
   
   /*ROTATE ARROW ON CLICK SIDEBAR*/
