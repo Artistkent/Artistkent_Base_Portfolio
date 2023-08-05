@@ -149,6 +149,7 @@ justify-content: center;
 
     padding-top: 10px;
   
+    overflow: -moz-scrollbars-vertical;
 overflow-x: scroll;
 
 scroll-behavior: smooth;
@@ -162,7 +163,13 @@ border-radius: 10px;
 
 
 ::-webkit-scrollbar{
-    width:0;
+    -webkit-appearance: none;
+  height: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .3);
   }
 
 
