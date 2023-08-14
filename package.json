@@ -13,6 +13,7 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "firebase": "^10.1.0",
     "gh-pages": "^3.0.0",
     "three": "^0.154.0"
   }
