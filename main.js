@@ -5,6 +5,17 @@ import * as THREE from 'three';
 
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
+import Terrestrial1 from './images/planets/Terrestrial1.png';
+import Gaseous2 from './images/planets/Gaseous2.png';
+import Alpine from './images/planets/Alpine.png';
+import Icy from './images/planets/Icy.png';
+import Clouds4 from './images/planets/Clouds4.png';
+import Savannah from './images/planets/Savannah.png';
+import Volcanic from './images/planets/Volcanic.png'
+
+import normal from './images/planets/normal.jpg';
+
+
 const scene = new THREE.Scene;
 
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000); 
@@ -117,8 +128,8 @@ function addStar_blue(){
 
 
 //moon 1 terrestrial
-const moonTexture = new THREE.TextureLoader().load('images/planets/Terrestrial1.png');
-const normalTexture = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(Terrestrial1);
+const normalTexture = new THREE.TextureLoader().load(normal);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(1.5, 32, 32),
@@ -144,8 +155,8 @@ moon.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 //moon 2 terrestrial
-const moonTexture2 = new THREE.TextureLoader().load('images/planets/Gaseous2.png');
-const normalTexture2 = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture2 = new THREE.TextureLoader().load(Gaseous2);
+const normalTexture2 = new THREE.TextureLoader().load(normal);
 
 const moon2 = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -166,8 +177,8 @@ moon2.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 //Moon 3 terrestrial
-const moonTexture3 = new THREE.TextureLoader().load('images/planets/Alpine.png');
-const normalTexture3 = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture3 = new THREE.TextureLoader().load(Alpine);
+const normalTexture3 = new THREE.TextureLoader().load(normal);
 
 const moon3 = new THREE.Mesh(
   new THREE.SphereGeometry(2.3, 32, 32),
@@ -188,8 +199,8 @@ moon3.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 //moon 4 terrestrial
-const moonTexture4 = new THREE.TextureLoader().load('images/planets/Icy.png');
-const normalTexture4 = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture4 = new THREE.TextureLoader().load(Icy);
+const normalTexture4 = new THREE.TextureLoader().load(normal);
 
 const moon4 = new THREE.Mesh(
   new THREE.SphereGeometry(0.8, 32, 32),
@@ -210,8 +221,8 @@ moon4.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 //moon 5 terrestrial
-const moonTexture5 = new THREE.TextureLoader().load('images/planets/Clouds4.png');
-const normalTexture5 = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture5 = new THREE.TextureLoader().load(Clouds4);
+const normalTexture5 = new THREE.TextureLoader().load(normal);
 
 const moon5 = new THREE.Mesh(
   new THREE.SphereGeometry(1.8, 32, 32),
@@ -232,8 +243,8 @@ moon5.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 //moon 6 terrestrial
-const moonTexture6 = new THREE.TextureLoader().load('images/planets/Savannah.png');
-const normalTexture6 = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture6 = new THREE.TextureLoader().load(Savannah);
+const normalTexture6 = new THREE.TextureLoader().load(normal);
 
 const moon6 = new THREE.Mesh(
   new THREE.SphereGeometry(2.2, 32, 32),
@@ -254,8 +265,8 @@ moon6.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 //moon 7 terrestrial
-const moonTexture7 = new THREE.TextureLoader().load('images/planets/Volcanic.png');
-const normalTexture7 = new THREE.TextureLoader().load('images/planets/normal.jpg');
+const moonTexture7 = new THREE.TextureLoader().load(Volcanic);
+const normalTexture7 = new THREE.TextureLoader().load(normal);
 
 const moon7 = new THREE.Mesh(
   new THREE.SphereGeometry(2.8, 32, 32),
