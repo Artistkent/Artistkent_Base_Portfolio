@@ -165,7 +165,7 @@ moon2.position.setY(THREE.MathUtils.randFloatSpread(80));
 
 
 
-//moon 3 terrestrial
+//Moon 3 terrestrial
 const moonTexture3 = new THREE.TextureLoader().load('images/planets/Alpine.png');
 const normalTexture3 = new THREE.TextureLoader().load('images/planets/normal.jpg');
 
